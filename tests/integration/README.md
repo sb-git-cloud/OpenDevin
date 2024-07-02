@@ -124,6 +124,13 @@ Simply set `FORCE_USE_LLM` environmental variable to true, or run the script lik
 FORCE_USE_LLM=true ./tests/integration/regenerate.sh
 ```
 
+with the model and API defined in the config.toml of the OpenDevin's project root directory as follows:
+```toml
+[integration-test-llm]
+model = "claude-3-5-sonnet-20240620"
+api_key = "your API key"
+```
+
 Note: `FORCE_USE_LLM` doesn't take effect if all tests are passing. If you want to
 regenerate regardless, you could remove everything under the
 `tests/integration/mock/[agent]/[test_name]` folder.
